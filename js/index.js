@@ -11,6 +11,7 @@ var endDiv = document.getElementById('end');
 var size = 4;
 var nextId = 1;
 var score = 0;
+var _resetNum = 0;
 
 function initGame() {
   game = Array(size * size).fill(null); // 4 x 4 grid, represented as an array
@@ -114,8 +115,8 @@ function drawBackground() {
     var tileDiv = document.createElement('div');
     var x = i % size;
     var y = Math.floor(i / size);
-    tileDiv.style.top = y * 100 + 'px';
-    tileDiv.style.left = x * 100 + 'px';
+    tileDiv.style.top = y * 80 + 'px';
+    tileDiv.style.left = x * 80 + 'px';
 
     tileDiv.classList.add("background");
     tileContainer.appendChild(tileDiv);
@@ -125,8 +126,8 @@ function drawBackground() {
 function positionTile(tile, elm) {
   var x = tile.index % size;
   var y = Math.floor(tile.index / size);
-  elm.style.top = y * 100 + 'px';
-  elm.style.left = x * 100 + 'px';
+  elm.style.top = y * 80 + 'px';
+  elm.style.left = x * 80 + 'px';
 }
 
 function drawGame(tiles, isNew) {
@@ -436,8 +437,16 @@ function handleKeypress(evt) {
     }
   }
 }
-
 function newGameStart() {
+  if(_resetNum !== 0){
+    var a = confirm("确定重新开始吗?");
+    console.log(a)
+    if(!a){
+      console.log("你选择了取消")
+      return
+    }
+  }
+  _resetNum++
   document.getElementById('tile-container').innerHTML = '';
   endDiv.classList.remove('active');
   score = 0;

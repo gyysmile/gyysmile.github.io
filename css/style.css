@@ -137,7 +137,7 @@ header .container {
   position: relative;
   margin: 0 auto;
   background: #9a9a95;
-  padding: 7px;
+  padding: 3px;
   display: inline-block;
   border-radius: 3px;
   box-sizing: border-box;
@@ -146,16 +146,16 @@ header .container {
 .tile-container {
   border-radius: 6px;
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 320px;
 }
 
 .tile, .background {
   display: block;
   color: #F8FFE5;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -163,7 +163,7 @@ header .container {
 .background {
   z-index: 1;
   text-align: center;
-  border: 7px solid #9a9a95;
+  border: 3px solid #9a9a95;
   background-color: #F8FFE5;
 }
 
@@ -186,7 +186,7 @@ header .container {
   -webkit-transition: 110ms ease-in-out;
   transition: 110ms ease-in-out;
   border-radius: 3px;
-  border: 7px solid #9a9a95;
+  border: 3px solid #9a9a95;
   box-sizing: border-box;
 }
 .tile--4 {
