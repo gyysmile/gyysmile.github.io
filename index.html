@@ -1,40 +1,158 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
-<title>Welcome to gyysmile.top</title>
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="css/reset.min.css">
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="个人网站">
+    <meta name="description" content="个人网站">
+    <title>Welcome to gyysmile.top</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link href="css/zui.min.css" rel="stylesheet">
+    <!--<link href="../static/stats/docs/base/1.0.min.css" rel="stylesheet">-->
+    <link href="lib/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="lib/ieonly/html5shiv.js"></script>
+    <script src="lib/ieonly/respond.js"></script>
+    <script src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+    <style>
+        .brand-logo{
+            position: relative;
+        }
+        .icon.self{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url("images/favicon.ico") 32px 32px;
+            background-size: 100%;
+            position: absolute;
+            top: -6px;
+            left: 0;
+        }
+        .brand-title{
+            margin-left: 34px;
+        }
+        #tabContent1 hr{
+            width: 150px;
+        }
+        .nav-tabs{
+            border: none;
+        }
+        .nav-tabs li a:hover{
+            border: 1px solid transparent;
+        }
+        .nav-tabs li.active a,
+        .nav-tabs li.active a:focus,
+        .nav-tabs li.active a:hover{
+            border: 1px solid transparent;
+        }
+    </style>
 </head>
 <body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- 导航头部 -->
+        <div class="navbar-header">
+            <!-- 移动设备上的导航切换按钮 -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 品牌名称或logo -->
+            <a class="navbar-brand" href="#">
+                <span class="brand-logo"><i class="icon self"></i></span>
+                <span class="brand-title">HiGeo</span>
+            </a>
+        </div>
+        <!-- 导航项目 -->
+        <div class="collapse navbar-collapse navbar-collapse-example">
+            <!-- 一般导航项目 -->
+            <ul class="nav navbar-nav nav-tabs">
+                <li class="active"><a data-tab href="#tabContent1">Introduce</a></li>
+                <!--<li><a data-tab href="#tabContent2">标签2</a></li>-->
+                <li><a data-tab href="#tabContent3">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container">
-	<div class="scores">
-		<div class="score-container best-score">
-			最佳: 
-			<div class="score">
-				<div id="bestScore">0</div>
-			</div>
-		</div>
-		<div class="score-container">
-			分数: 
-			<div class="score">
-				<div id="score">0</div>
-				<div class="add" id="add"></div>
-			</div>
-		</div>
-	</div>
-	<div class="game">
-		<div id="tile-container" class="tile-container"></div>
-		<div class="end" id="end">游戏结束<div class="monkey"></div><button class="btn not-recommended__item js-restart-btn" id="try-again">再试一次</button></div>
-	</div>
-	<div class="not-recommended">
-		<button class="btn not-recommended__item js-restart-btn" id="restart">重新启动游戏</button>
-	</div>
-</div>
-<script src="js/index.js"></script>
-</body>
-</html>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tabContent1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <!--<img src="images/photo.jpg" class="img-circle center-block" alt="its me">-->
+                        <hr>
+                        <h1 class="text-muted">Hi, I am Geo</h1>
+                        <h1 class="text-muted">Web Front-end developer</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!--  <div class="tab-pane" id="tabContent2">
+            <p>标签2的内容。</p>
+        </div>-->
+        <div class="tab-pane" id="tabContent3">
+            <div class="panel">
+                <div class="panel-body">
 
+                    <div id="accordion">
+                        <p>
+                            <a href="#collapseExample5" data-toggle="collapse" data-parent="#accordion" class="btn btn-link">
+                                <i class="icon icon-list-alt"></i>
+                            </a>
+                        </p>
+                        <div class="collapse in" id="collapseExample5">
+                            <div class="with-padding">
+                                <p>https://blog.csdn.net/gyysmile</p>
+                            </div>
+                        </div>
+                        <p>
+                            <a href="#collapseExample1" data-toggle="collapse" data-parent="#accordion" class="btn btn-link">
+                                <i class="icon icon-github"></i>
+                            </a>
+                        </p>
+                        <div class="collapse in" id="collapseExample1">
+                            <div class="with-padding">
+                                <p>https://github.com/gyysmile/gyysmile.github.io</p>
+                            </div>
+                        </div>
+                        <p>
+                            <a href="#collapseExample2" data-toggle="collapse" data-parent="#accordion" class="btn btn-link collapsed">
+                                <i class="icon icon-qq"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample2">
+                            <div class="bg-success with-padding">
+                                <p>455477505</p>
+                            </div>
+                        </div>
+                        <p>
+                            <a href="#collapseExample3" data-toggle="collapse" data-parent="#accordion" class="btn btn-link collapsed">
+                                <i class="icon icon-wechat"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample3">
+                            <div class="bg-danger with-padding">
+                                <p>gyy_keepsmile</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="lib/jquery/jquery.js"></script>
+<script src="js/zui.min.js"></script>
+<script src="lib/backstretch/jquery.backstretch.min.js"></script>
+<link href="lib/bootbox/bootbox.min.css" rel="stylesheet">
+<script src="lib/bootbox/bootbox.min.js"></script>
+<!--<script src="lib/datetimepicker/datetimepicker.min.js"></script>-->
+<script src="js/index.js"></script>
+</html>
